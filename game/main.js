@@ -37,8 +37,8 @@ monster = {
 }
 
 update = (d) => {
-	if (38 in keysDown||87 in keysDown) hero.y -= hero.speed * d
-	if (40 in keysDown||83 in keysDown) hero.y += hero.speed * d
+	if (38 in keysDown||83 in keysDown) hero.y -= hero.speed * d
+	if (40 in keysDown||87 in keysDown) hero.y += hero.speed * d
 	if (37 in keysDown||65 in keysDown) hero.x -= hero.speed * d
 	if (39 in keysDown||68 in keysDown) hero.x += hero.speed * d
 
