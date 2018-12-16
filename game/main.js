@@ -42,6 +42,7 @@ hero = {
 }
 
 monster = {
+    speed: 128,
     x: 0,
     y: 0
 }
@@ -51,6 +52,11 @@ function update(d) {
     if (40 in keysDown || 83 in keysDown) hero.y += hero.speed * d
     if (37 in keysDown || 65 in keysDown) hero.x -= hero.speed * d
     if (39 in keysDown || 68 in keysDown) hero.x += hero.speed * d
+
+    if (monster.x < hero.x) monster.x -= monster.x * d
+    if (monster.y < hero.y) monster.y -= monster.y * d
+    if (monster.x > hero.x) monster.x += monster.x * d
+    if (monster.y > hero.y) monster.y += monster.y * d
 
     if (hero.x <= 0) hero.x = canvas.width
     else if (hero.x >= canvas.width) hero.x = 0
