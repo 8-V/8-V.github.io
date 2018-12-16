@@ -1,3 +1,4 @@
+// © tыreno
 level = 0
 
 bgReady = false
@@ -63,10 +64,10 @@ function update(d) {
     if (hero.y <= 0) hero.y = canvas.height
     else if (hero.y >= canvas.height) hero.y = 0
 
-    if (monster.x <= 0) monster.x = 0
-    else if (monster.x >= canvas.width) monster.x = canvas.width
-    if (monster.y <= 0) monster.y = 0
-    else if (monster.y >= canvas.height) monster.y = canvas.height
+    if (monster.x <= 0) monster.x = 32
+    else if (monster.x >= canvas.width) monster.x = canvas.width-32
+    if (monster.y <= 0) monster.y = 32
+    else if (monster.y >= canvas.height) monster.y = canvas.height-32
 
     if (
         hero.x <= (monster.x + 32) &&
