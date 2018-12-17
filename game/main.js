@@ -89,7 +89,7 @@ function render() {
 	ctx.font = "24px Helvetica";
 	ctx.textAlign = "left";
 	ctx.textBaseline = "top";
-	ctx.fillText("Health: " + level, 32, 32);
+	ctx.fillText("Health: " + health, 32, 32);
 
 }
 
