@@ -85,11 +85,13 @@ function render() {
 	if (heroReady) ctx.drawImage(heroImg, hero.x, hero.y)
 	if (monsterReady) ctx.drawImage(monsterImg, monster.x, monster.y)
 
-	ctx.fillStyle = "rgb(250, 250, 250)";
-	ctx.font = "24px Helvetica";
-	ctx.textAlign = "left";
-	ctx.textBaseline = "top";
-	ctx.fillText("Health: " + health, 32, 32);
+	if (health>0){
+		ctx.fillStyle = "rgb(250, 250, 250)";
+		ctx.font = "24px Helvetica";
+		ctx.textAlign = "left";
+		ctx.textBaseline = "top";
+		ctx.fillText("Health: " + health, 32, 32);
+	}
 
 }
 
@@ -113,7 +115,6 @@ function main(t) {
 		ctx.font = "24px Helvetica";
 		ctx.textAlign = "left";
 		ctx.textBaseline = "top";
-		ctx.fillText("         ", 32, 32);
 		ctx.fillText("Total: "+(now-begin)/1000 + ' seconds', 32, 32);
 	}
 }
