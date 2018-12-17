@@ -87,7 +87,7 @@ function render() {
 
 	if (health>0){
 		ctx.fillStyle = "rgb(250, 250, 250)";
-		ctx.font = "24px Helvetica";
+		ctx.font = "24px Comic Sans MS";
 		ctx.textAlign = "left";
 		ctx.textBaseline = "top";
 		ctx.fillText("Health: " + health, 32, 32);
@@ -109,10 +109,11 @@ function main(t) {
 	update(delta / 1000)
 	render()
 	then = now
-	if (health >0)requestAnimationFrame(main)
+	if (health >0)
+		requestAnimationFrame(main)
 	else {
 		ctx.fillStyle = "rgb(250, 250, 250)";
-		ctx.font = "24px Helvetica";
+		ctx.font = "24px Comic Sans MS";
 		ctx.textAlign = "left";
 		ctx.textBaseline = "top";
 		ctx.fillText("Total: "+(now-begin)/1000 + ' seconds', 32, 32);
