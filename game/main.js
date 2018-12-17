@@ -113,6 +113,7 @@ function main(t) {
 		ctx.font = "24px Helvetica";
 		ctx.textAlign = "left";
 		ctx.textBaseline = "top";
+		ctx.fillText("         ", 32, 32);
 		ctx.fillText("Total: "+(now-begin)/1000 + ' seconds', 32, 32);
 	}
 }
