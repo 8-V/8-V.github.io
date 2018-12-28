@@ -113,7 +113,7 @@ function main(t) {
 		requestAnimationFrame(main)
 	else {
 		ctx.fillStyle = "rgb(250, 250, 250)";
-		ctx.font = "24px Comic Sans MS";
+		ctx.font = "24px Purisa";
 		ctx.textAlign = "left";
 		ctx.textBaseline = "top";
 		ctx.fillText("Total: "+(now-begin)/1000 + ' seconds', 32, 32);
