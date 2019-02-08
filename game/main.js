@@ -101,6 +101,12 @@ function reset() {
 
 	monster.x = Math.random() * (canvas.width - 64)
 	monster.y = Math.random() * (canvas.height - 64)
+	
+	while (sqr(hero.x-monster.x)+sqr(hero.y-monster.y) <= 9216) // 9216 = 32 ^ 2
+	{
+		monster.x = Math.random() * (canvas.width - 64)
+		monster.y = Math.random() * (canvas.height - 64)
+	}
 }
 
 function main(t) {
