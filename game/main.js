@@ -120,6 +120,11 @@ function main(t) {
 	}
 }
 
+function restart() {
+	health = 5;
+	main();
+}
+
 begin = then = Date.now()
 reset()
 main()
