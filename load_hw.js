@@ -1,4 +1,4 @@
-layout = $('#parent')
+layout = $('#layout')
 $.ajax('/hw/list.json', {
     complete: (xhr, stat) => {
         if (stat != 'success') {
