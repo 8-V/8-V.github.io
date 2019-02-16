@@ -2,7 +2,7 @@ layout = $('#layout')
 url = "https://homework-63c7.restdb.io/rest/hw"
 $.ajax({
 	url: url,
-	beforeSend: (xhr) => { setRequestHeader('x-apikey', '5c67dd3bad19dc08b020d499') },
+	beforeSend: (xhr) => { xhr.setRequestHeader('x-apikey', '5c67dd3bad19dc08b020d499') },
 	complete: (xhr, stat) => {
 		if (stat != 'success') {
 			console.error(stat)
