@@ -3,7 +3,7 @@ type = (new URL(location.href)).searchParams.get("t")
 xhr = new XMLHttpRequest()
 //xhr.withCredentials = true
 
-xhr.responsetype='blob'
+xhr.responsetype='arraybuffer'
 
 xhr.open('GET', "https://homework-63c7.restdb.io/media/" + type)
 
@@ -14,7 +14,7 @@ xhr.onload = (stat) => {
 		console.error(stat)
 		return
 	}
-	$('#img').src = new Blob([xhr.response], {type: 'image/png'})
+	$('#img').src = new Blob(new Uint8Array(xhr.response), {type: 'image/png'})
 }
 
 xhr.send()
