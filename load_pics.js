@@ -16,7 +16,7 @@ xhr.onload = (stat) => {
 		console.error(stat)
 		return
 	}
-	$('#img').src = new Blob(new Uint8Array(xhr.response), {type: 'image/png'})
+	$('#img').src = new Blob(new Uint8Array(xhr.response), {type: 'image/jpeg'})
 }
 
 xhr.send()
