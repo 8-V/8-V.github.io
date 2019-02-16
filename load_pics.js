@@ -14,3 +14,4 @@ xhr.onload = (stat) => {
 	}
 	$('#img').src = new Blob([xhr.response], {type: 'image/png'})
 }
+alert('OK')
