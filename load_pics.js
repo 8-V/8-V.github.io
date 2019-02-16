@@ -8,11 +8,11 @@ xhr.responsetype='blob'
 xhr.open('GET', "https://homework-63c7.restdb.io/media/" + type)
 
 xhr.onload = (stat) => {
-	//if (!xhr.response) {
-	//	console.error(stat)
-	//	return
-	//}
-	//$('#img').src = new Blob([xhr.response], {type: 'image/png'})
+	if (!xhr.response) {
+		console.error(stat)
+		return
+	}
+	$('#img').src = new Blob([xhr.response], {type: 'image/png'})
 	alert('OK')
 }
 
