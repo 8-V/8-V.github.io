@@ -11,5 +11,5 @@ xhr.onload = (stat) => {
 		console.error(stat)
 		return
 	}
-	$('#img').src = xhr.response
+	$('#img').src = new Blob([xhr.response], {type: 'image/png'})
 }
