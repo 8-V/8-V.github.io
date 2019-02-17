@@ -1,7 +1,6 @@
 type = (new URL(location.href)).searchParams.get("t")
 
 xhr = new XMLHttpRequest()
-//xhr.withCredentials = true
 
 xhr.responseType='blob'
 
