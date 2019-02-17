@@ -12,12 +12,12 @@ xhr.setRequestHeader('content-type','image/jpeg')
 xhr.setRequestHeader('cache-control','no-cache')
 xhr.setRequestHeader('Accept','image/jpeg')
 
-xhr.onload = (stat) => {
-	if (!xhr.response) {
-		console.error(stat)
-		return
-	}
-	//$('#img').src = new Blob(new Uint8Array(xhr.response), {type: 'image/jpeg'})
-}
+//xhr.onload = (stat) => {
+//	if (!xhr.response) {
+//		console.error(stat)
+//		return
+//	}
+//	$('#img').src = new Blob(new Uint8Array(xhr.response), {type: 'image/jpeg'})
+//}
 
 xhr.send()
