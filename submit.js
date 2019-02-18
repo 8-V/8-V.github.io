@@ -1,7 +1,7 @@
-//document.getElementById('img').onclick = () => 
-//{
-//	document.getElementById('imgfile').click()
-//}
+document.getElementById('img').onclick = () => 
+{
+	document.getElementById('imgfile').click()
+}
 document.getElementById('imgfile').onchange = () =>
 {
 	file = document.getElementById('imgfile').files[0]
