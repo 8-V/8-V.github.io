@@ -1,5 +1,5 @@
 layout = $('#layout')
-url = "https://homework-63c7.restdb.io/rest/hw"
+url = "https://homework-63c7.restdb.io/rest/email_inbound"
 $.ajax({
 	url: url,
 	beforeSend: (xhr) => {
