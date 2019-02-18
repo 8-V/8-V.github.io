@@ -4,9 +4,9 @@ fetch(url, {
     headers: {
         'x-apikey': '5c67dd3bad19dc08b020d499'
     }
-}).then(res => { res.ok ? res.json() : console.error(res)}).then(res => {
+}).then(res => res.json()).then(res => {
     window.preds = res
-    fetch('/card.tmp').then(res => res.ok ? res.text() : console.error(res)).then(template => {
+    fetch('/card.tmp').then(res => res.text()).then(template => {
         window.temp = template
         for (var i = 0; i < window.preds.length; i++) {
             pred = preds[i]
