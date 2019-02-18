@@ -4,7 +4,7 @@ document.getElementById('img').onclick = () =>
 }
 document.getElementById('submit').onclick = document.getElementById('imgfile').onchange = () =>
 {
-	file = this.files[0]
+	file = document.getElementById('imgfile').files[0]
 	fd = new FormData()
 	fd.append('img', file)
 	fd.append('name', document.getElementById('name').value)
