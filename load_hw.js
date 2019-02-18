@@ -20,7 +20,7 @@ $.ajax({
 				window.template = xhr.responseText
 				for (var i = window.predmets.length - 1; i >= 0; i--) {
 					predmet = window.predmets[i];
-					card = template.replace('TYPE', encodeURIComponent(predmet.img[0])).replace('TITLE', predmet.name).replace('TEXT', predmet.desc)
+					card = template.replace('TITLE', predmet.body).replace('TEXT', predmet.subject)
 					layout.append(card)
 				}
 			}

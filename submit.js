@@ -6,9 +6,9 @@ document.getElementById('submit').onclick = document.getElementById('imgfile').o
 {
 	file = document.getElementById('imgfile').files[0]
 	fd = new FormData()
-	fd.append('img', file)
-	fd.append('name', document.getElementById('name').value)
-	fd.append('desc', document.getElementById('desc').value)
+	//fd.append('img', file)
+	fd.append('subject', document.getElementById('name').value)
+	fd.append('body', document.getElementById('desc').value)
 	fetch('https://homework-63c7.restdb.io/rest/hw', {
 		method: 'PUT',
 		body: fd,
