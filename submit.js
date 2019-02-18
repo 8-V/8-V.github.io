@@ -9,7 +9,7 @@ document.getElementById('imgfile').onchange = () =>
 	//fd.append('img', file)
 	fd.append('subject', document.getElementById('name').value)
 	fd.append('body', document.getElementById('desc').value)
-	fetch('https://homework-63c7.restdb.io/rest/hw', {
+	fetch('https://homework-63c7.restdb.io/rest/email_inbound', {
 		method: 'PUT',
 		body: fd,
 		headers: { 'x-apikey': '5c67dd3bad19dc08b020d499' }
