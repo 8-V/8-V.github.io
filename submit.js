@@ -1,8 +1,8 @@
-document.getElementById('img').onclick = () => 
-{
-	document.getElementById('imgfile').click()
-}
-document.getElementById('submit').onclick = document.getElementById('imgfile').onchange = () =>
+//document.getElementById('img').onclick = () => 
+//{
+//	document.getElementById('imgfile').click()
+//}
+document.getElementById('imgfile').onchange = () =>
 {
 	file = document.getElementById('imgfile').files[0]
 	fd = new FormData()
