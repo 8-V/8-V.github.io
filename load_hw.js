@@ -23,8 +23,9 @@ function update() {
 }
 update()
 
-group.onclick = () => {
-  group.value = (group.checked?'1':'2')+' группа'
+group.onchange = () => {
+  console.log(group)
+  document.querySelector('#checklabel').innerText = (group.checked?'1':'2')+' группа'
   document.querySelector('.mdl-js-snackbar').MaterialSnackbar.showSnackbar({message: 'Загрузка...'})
   update()
 }
