@@ -1,5 +1,5 @@
 #!/bin/bash
 git add .
-git commit -m "$(curl http://whatthecommit.com/index.txt)"
+git commit -m "$(curl http://whatthecommit.com/index.txt 2> /dev/null)"
 git push
 #surge .

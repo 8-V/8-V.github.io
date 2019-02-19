@@ -7,7 +7,7 @@ document.getElementById('submit').onclick = () =>
     }
     fetch('https://homework-63c7.restdb.io/rest/email_inbound', {
         method: 'POST',
-        body: body,
+        body: JSON.stringify(body),
         headers: {
             'x-apikey': '5c67dd3bad19dc08b020d499'
         }
