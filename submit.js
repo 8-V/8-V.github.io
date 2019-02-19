@@ -3,6 +3,7 @@ document.getElementById('submit').onclick = () =>
 	fd = new FormData()
 	fd.append('subject', document.getElementById('name').value)
 	fd.append('body', document.getElementById('desc').value)
+        fd.append('from', 'anonymous@8v-dz.tk')
 	fetch('https://homework-63c7.restdb.io/rest/email_inbound', {
 		method: 'POST',
 		body: fd,
