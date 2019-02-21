@@ -9,7 +9,7 @@ document.getElementById('submit').onclick = () =>
         method: 'POST',
         body: JSON.stringify(body),
         headers: {
-            'x-apikey': '5c67dd3bad19dc08b020d499',
+            'x-apikey': '5c6ecf1828ca2e129e8696e8',
             'content-type': 'application/json'
         }
     }).then(response => response.ok ? console.log('POST OK') : console.error('POST not OK'))
