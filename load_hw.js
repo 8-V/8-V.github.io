@@ -5,7 +5,7 @@ url = 'https://homework-63c7.restdb.io/rest/email_inbound'
 function update() {
   fetch(url, {
     headers: {
-      'x-apikey': '5c67dd3bad19dc08b020d499'
+      'x-apikey': '5c6ecf1828ca2e129e8696e8'
     }
   }).then(res => res.json()).then(res => {
     window.preds = res
