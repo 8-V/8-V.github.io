@@ -1,6 +1,7 @@
 // (С)тырено
 health = 5
-wait = [false, null]
+wait = false
+keysDown = {}
 
 bgReady = false
 bgImg = new Image()
@@ -23,14 +24,9 @@ monsterImg.onload = function() {
 }
 monsterImg.src = 'monster.png'
 
-keysDown = {}
-
 addEventListener('keydown', function(e) {
 	keysDown[e.keyCode] = true
-	if(wait[0]) {
-		wait[1]()
-		wait = [false, null]
-	}
+	wait = false
 })
 addEventListener('keyup', function(e) {
 	delete keysDown[e.keyCode]
@@ -116,12 +112,14 @@ function reset() {
 }
 
 function main(t) {
-	now = Date.now()
-	delta = now - then
-	update(delta / 1000)
-	render()
-	then = now
-	if (health >0 && !wait[0])
+	if (!wait) {
+		now = Date.now()
+		delta = now - then
+		update(delta / 1000)
+		render()
+		then = now
+	}
+	if (health >0)
 		requestAnimationFrame(main)
 	else {
 		ctx.fillStyle = "rgb(250, 250, 250)"
@@ -136,11 +134,8 @@ function restart() {
 	health = 5
 	begin = then = Date.now()
 	reset()
-	waitKey(main)
-}
-
-function waitKey(callback) {
-	wait = [true, callback]
+	wait = true
+	main()
 }
 
 restart()
