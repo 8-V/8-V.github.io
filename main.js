@@ -112,13 +112,14 @@ function reset() {
 }
 
 function main(t) {
-	if (!wait) {
-		now = Date.now()
-		delta = now - then
+	now = Date.now()
+	delta = now - then
+	if (wait) begin += delta
+	else {
 		update(delta / 1000)
-		render()
-		then = now
 	}
+	render()
+	then = now
 	if (health >0)
 		requestAnimationFrame(main)
 	else {
