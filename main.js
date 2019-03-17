@@ -77,7 +77,7 @@ function update(d) {
 		monster.y <= (hero.y + 32)
 	) {
 		health--
-		waitKey(main)
+		wait = true
 		reset()
 	}
 }
@@ -134,6 +134,7 @@ function restart() {
 	health = 5
 	begin = then = Date.now()
 	reset()
+	render()
 	wait = true
 	main()
 }
