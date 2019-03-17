@@ -1,5 +1,6 @@
 // (С)тырено
 health = 5
+wait = [false, null]
 
 bgReady = false
 bgImg = new Image()
@@ -26,6 +27,10 @@ keysDown = {}
 
 addEventListener('keydown', function(e) {
 	keysDown[e.keyCode] = true
+	if(wait[0]) {
+		wait[1]()
+		wait = [false, null]
+	}
 })
 addEventListener('keyup', function(e) {
 	delete keysDown[e.keyCode]
@@ -130,9 +135,11 @@ function restart() {
 	health = 5
 	begin = then = Date.now()
 	reset()
-	main()
+	waitKey(main)
 }
 
-begin = then = Date.now()
-reset()
-main()
+function waitKey(callback) {
+	wait = [true, callback]
+}
+
+restart()
