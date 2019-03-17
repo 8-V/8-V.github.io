@@ -81,6 +81,7 @@ function update(d) {
 		monster.y <= (hero.y + 32)
 	) {
 		health--
+		waitKey(main)
 		reset()
 	}
 }
@@ -120,7 +121,7 @@ function main(t) {
 	update(delta / 1000)
 	render()
 	then = now
-	if (health >0)
+	if (health >0 && !wait[0])
 		requestAnimationFrame(main)
 	else {
 		ctx.fillStyle = "rgb(250, 250, 250)"
