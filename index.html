@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Simple HTML5 game</title>
-	</head>
-	<body>
-		<canvas id="game"></canvas>
-		<script src="util.js"></script>
-		<script src="main.js"></script>
-		<button onclick="restart()">Reset</button>
-	</body>
+  <head>
+    <title>Simple HTML5 game</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+    <script src="util.js"></script>
+    <script src="main.js"></script>
+    <button onclick="restart()">Reset</button>
+    <button onclick="cheats()">Activate cheats</button>
+    <div class="cheat">Cheats activated!</div>
+  </body>
 </html>
